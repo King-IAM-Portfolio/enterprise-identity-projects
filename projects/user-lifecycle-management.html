@@ -1,386 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="User Lifecycle Management - Implement automated provisioning and deprovisioning workflows.">
-    <title>User Lifecycle Management | IAM Portfolio</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../dark-mode.css" id="dark-mode-link">
-    <style>
-        .project-detail {
-            padding: var(--spacing-3xl) var(--spacing-lg);
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: var(--spacing-2xl);
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: var(--font-size-sm);
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        .project-header {
-            margin-bottom: var(--spacing-2xl);
-            border-bottom: 2px solid var(--border);
-            padding-bottom: var(--spacing-2xl);
-        }
-        .project-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            gap: var(--spacing-lg);
-        }
-        .project-info h1 {
-            font-size: var(--font-size-2xl);
-            margin-bottom: var(--spacing-md);
-        }
-        .status-badge {
-            display: inline-block;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: var(--font-size-sm);
-            font-weight: 600;
-            white-space: nowrap;
-        }
-        .status-planned {
-            background-color: #FFB900;
-            color: #333;
-        }
-        .status-progress {
-            background-color: #0078D4;
-            color: white;
-        }
-        .status-completed {
-            background-color: #107C10;
-            color: white;
-        }
-        .project-section {
-            margin-bottom: var(--spacing-2xl);
-        }
-        .project-section h2 {
-            font-size: var(--font-size-xl);
-            color: var(--primary);
-            margin-bottom: var(--spacing-lg);
-            padding-top: var(--spacing-lg);
-            border-top: 1px solid var(--border);
-        }
-        .project-section h3 {
-            font-size: var(--font-size-lg);
-            color: var(--text-primary);
-            margin: var(--spacing-lg) 0 var(--spacing-md) 0;
-        }
-        .content-box {
-            background-color: var(--surface);
-            padding: var(--spacing-lg);
-            border-radius: 8px;
-            margin: var(--spacing-lg) 0;
-            border-left: 4px solid var(--primary);
-        }
-        .placeholder-box {
-            background-color: var(--surface);
-            border: 2px dashed var(--border);
-            padding: var(--spacing-2xl);
-            border-radius: 8px;
-            text-align: center;
-            color: var(--text-secondary);
-            margin: var(--spacing-lg) 0;
-            min-height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
-            margin: var(--spacing-lg) 0;
-        }
-        .skill-item {
-            background-color: var(--surface);
-            padding: var(--spacing-lg);
-            border-radius: 8px;
-            border-left: 4px solid var(--success);
-        }
-        .skill-item h4 {
-            margin-top: 0;
-            color: var(--primary);
-        }
-        ul, ol {
-            margin-left: var(--spacing-xl);
-            color: var(--text-secondary);
-        }
-        li {
-            margin-bottom: var(--spacing-md);
-            line-height: 1.7;
-        }
-        strong {
-            color: var(--text-primary);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="User Lifecycle Management and Identity Administration project using Microsoft Entra ID." />
+  <title>User Lifecycle Management | IAM Portfolio</title>
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../dark-mode.css" />
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <h1>IAM Portfolio</h1>
-            </div>
-            <div class="nav-menu">
-                <a href="../index.html#home" class="nav-link">Home</a>
-                <a href="../index.html#projects" class="nav-link">Projects</a>
-                <a href="../index.html#about" class="nav-link">About</a>
-                <button class="theme-toggle" id="theme-toggle">🌙</button>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <h1>IAM Portfolio</h1>
+      </div>
 
-    <!-- Main Content -->
-    <div class="container project-detail">
-        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+      <div class="nav-menu" id="nav-menu">
+        <a href="../index.html#home" class="nav-link">Home</a>
+        <a href="../index.html#projects" class="nav-link">Projects</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
 
-        <div class="project-header">
-            <div class="project-title">
-                <div class="project-info">
-                    <h1>User Lifecycle Management</h1>
-                    <p>Implement automated provisioning and deprovisioning workflows for user accounts across cloud and on-premises systems</p>
-                </div>
-                <span class="status-badge status-completed">Completed</span>
-            </div>
-        </div>
-
-        <section class="project-section">
-
-            <h2>Executive Summary</h2>
-
-        <div class="summary-card">
-            <p>
-                A newly provisioned Microsoft Entra ID test tenant required the creation of an initial operational administrator to establish identity management, user provisioning, role administration, and user lifecycle operations before onboarding additional users. This administrator account serves as the foundational identity used to manage Microsoft Entra resources, configure security settings, and perform ongoing directory administration within a non-production environment.
-           </p>
-        </div>
-
-        </section>
-        </div>
-
-        <!-- Business Scenario -->
-        <div class="project-section">
-            <h2>Business Scenario</h2>
-            <div class="content-box">
-                <p><strong>Situation:</strong> [Placeholder - Document your organization's specific scenario]</p>
-                <p style="margin-top: var(--spacing-md);">
-                    Example considerations:
-                </p>
-                <ul>
-                    <li>Organization size and user population</li>
-                    <li>On-premises infrastructure and cloud adoption stage</li>
-                    <li>Current identity provisioning challenges</li>
-                    <li>Integration requirements with HR systems</li>
-                    <li>Regulatory or compliance requirements</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Objectives -->
-        <div class="project-section">
-            <h2>Business Objectives</h2>
-            <div class="content-box">
-                <ul>
-                    <li>Automate user account creation based on HR data</li>
-                    <li>Ensure consistent provisioning across cloud and on-premises systems</li>
-                    <li>Implement automated offboarding and access revocation</li>
-                    <li>Reduce manual identity management overhead</li>
-                    <li>Improve security posture through consistent access controls</li>
-                    <li>Enable compliance with audit and retention policies</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Environment -->
-        <div class="project-section">
-            <h2>Environment</h2>
-            <div class="content-box">
-                <h3>Infrastructure Components</h3>
-                <p><strong>Placeholder:</strong> Document your lab or production environment configuration including:</p>
-                <ul>
-                    <li>Microsoft Entra ID tenant and licensing</li>
-                    <li>On-premises Active Directory (if applicable)</li>
-                    <li>Azure AD Connect configuration</li>
-                    <li>HR system or identity source</li>
-                    <li>Cloud applications and SaaS solutions</li>
-                    <li>Synchronization tools and APIs</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Architecture Diagram -->
-        <div class="project-section">
-            <h2>Architecture Diagram</h2>
-            <div class="placeholder-box">
-                [Placeholder: Add architecture diagram showing user lifecycle flow,
-                <br>provisioning sources, and target systems]
-            </div>
-        </div>
-
-        <!-- Technologies Used -->
-        <div class="project-section">
-            <h2>Technologies Used</h2>
-            <div class="content-box">
-                <ul>
-                    <li>Microsoft Entra ID (Azure AD)</li>
-                    <li>Azure AD Connect</li>
-                    <li>Microsoft Entra ID Provisioning Service</li>
-                    <li>Microsoft Graph API</li>
-                    <li>Active Directory (on-premises)</li>
-                    <li>HR system connectors</li>
-                    <li>PowerShell automation</li>
-                    <li>Azure Logic Apps (optional)</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Implementation Steps -->
-        <div class="project-section">
-            <h2>Implementation Steps</h2>
-            <div class="placeholder-box">
-                [Placeholder: Document your step-by-step implementation process including:
-                <br>1. Assessment and planning
-                <br>2. HR system integration
-                <br>3. Entra ID provisioning configuration
-                <br>4. Attribute mapping
-                <br>5. Testing and validation
-                <br>6. Pilot deployment
-                <br>7. Production rollout]
-            </div>
-        </div>
-
-        <!-- Validation & Testing -->
-        <div class="project-section">
-            <h2>Validation & Testing</h2>
-            <div class="placeholder-box">
-                [Placeholder: Document your testing approach including:
-                <br>- Test scenarios for provisioning workflows
-                <br>- Validation of attribute synchronization
-                <br>- Testing of deprovisioning workflows
-                <br>- Compliance verification
-                <br>- Performance testing results]
-            </div>
-        </div>
-
-        <!-- Screenshots -->
-        <div class="project-section">
-            <h2>Annotated Screenshots</h2>
-            <div class="placeholder-box">
-                [Placeholder: Add annotated screenshots showing:
-                <br>- Entra ID provisioning configuration
-                <br>- User creation workflows
-                <br>- Attribute mapping
-                <br>- Monitoring and logs]
-            </div>
-        </div>
-
-        <!-- Security Considerations -->
-        <div class="project-section">
-            <h2>Security Considerations</h2>
-            <div class="content-box">
-                <ul>
-                    <li><strong>Data Privacy:</strong> Sensitive HR data protection and minimal data disclosure</li>
-                    <li><strong>Access Control:</strong> Principle of least privilege for provisioning service accounts</li>
-                    <li><strong>Audit Logging:</strong> Comprehensive logging of all provisioning activities</li>
-                    <li><strong>API Security:</strong> Secure authentication and encryption for HR system integration</li>
-                    <li><strong>Deprovisioning:</strong> Immediate access revocation upon termination</li>
-                    <li><strong>Error Handling:</strong> Secure management of failed provisioning attempts</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Lessons Learned -->
-        <div class="project-section">
-            <h2>Lessons Learned</h2>
-            <div class="placeholder-box">
-                [Placeholder: Document key learnings from implementation including:
-                <br>- Technical challenges encountered
-                <br>- Solutions implemented
-                <br>- Best practices discovered
-                <br>- Recommendations for similar projects]
-            </div>
-        </div>
-
-        <!-- Skills Demonstrated -->
-        <div class="project-section">
-            <h2>Skills Demonstrated</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <h4>Identity Provisioning</h4>
-                    <p>Design and configuration of automated provisioning workflows using Entra ID provisioning service</p>
-                </div>
-                <div class="skill-item">
-                    <h4>System Integration</h4>
-                    <p>Integration between HR systems, Entra ID, and on-premises Active Directory</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Attribute Mapping</h4>
-                    <p>Complex attribute transformation and mapping between systems</p>
-                </div>
-                <div class="skill-item">
-                    <h4>API Development</h4>
-                    <p>Use of Microsoft Graph API for identity automation and reporting</p>
-                </div>
-                <div class="skill-item">
-                    <h4>PowerShell Scripting</h4>
-                    <p>Automation scripts for provisioning workflows and compliance</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Security & Compliance</h4>
-                    <p>Implementation of security controls and audit compliance</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Interview Talking Points -->
-        <div class="project-section">
-            <h2>Interview Talking Points</h2>
-            <div class="content-box">
-                <h3>Key Discussion Topics</h3>
-                <ul>
-                    <li><strong>Challenge:</strong> How do you handle complex attribute mapping scenarios?</li>
-                    <li><strong>Approach:</strong> Best practices for testing provisioning workflows before production deployment</li>
-                    <li><strong>Problem-Solving:</strong> How to handle failed provisioning attempts and maintain consistency</li>
-                    <li><strong>Scale:</strong> How to manage provisioning for large user populations efficiently</li>
-                    <li><strong>Integration:</strong> Challenges integrating legacy HR systems with modern cloud identity platforms</li>
-                    <li><strong>Compliance:</strong> How provisioning automation helps meet regulatory requirements</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- References -->
-        <div class="project-section">
-            <h2>References & Resources</h2>
-            <div class="content-box">
-                <ul>
-                    <li><a href="https://learn.microsoft.com/en-us/entra/identity/app-provisioning/" target="_blank" rel="noopener noreferrer">Microsoft Entra ID Provisioning Documentation</a></li>
-                    <li><a href="https://learn.microsoft.com/en-us/entra/identity/hybrid/" target="_blank" rel="noopener noreferrer">Hybrid Identity Documentation</a></li>
-                    <li><a href="https://learn.microsoft.com/en-us/graph/api/overview" target="_blank" rel="noopener noreferrer">Microsoft Graph API Reference</a></li>
-                    <li><a href="https://learn.microsoft.com/en-us/powershell/module/az.resources/" target="_blank" rel="noopener noreferrer">Azure PowerShell Reference</a></li>
-                </ul>
-            </div>
-        </div>
+      <div class="hamburger" id="hamburger" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2026 Identity & Access Management Portfolio. All rights reserved.</p>
-            <p>Hands-on Microsoft Entra ID and enterprise identity implementations.</p>
+  <main class="container project-detail">
+    <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+
+    <section class="project-header">
+      <div class="project-title">
+        <div class="project-info">
+          <h1>User Lifecycle Management & Identity Administration</h1>
+          <p>
+            Microsoft Entra ID project documenting initial administrator creation,
+            user provisioning, role assignment, license management, and secure user lifecycle operations.
+          </p>
         </div>
-    </footer>
 
-    <script src="../script.js"></script>
+        <span class="status-badge status-completed">Completed</span>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Executive Summary</h2>
+
+      <div class="summary-card">
+        <p>
+          A newly provisioned Microsoft Entra ID test tenant required the creation of an initial operational administrator
+          to establish identity management, user provisioning, role administration, and user lifecycle operations before
+          onboarding additional users. This administrator account serves as the foundational identity used to manage
+          Microsoft Entra resources, configure security settings, and perform ongoing directory administration within a
+          non-production environment.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Implementation Workflow</h2>
+
+      <div class="image-container">
+        <img
+          src="../assets/images/user-lifecycle-management/entra-user-lifecycle-overview.png"
+          alt="Microsoft Entra ID User Lifecycle Management Implementation Workflow"
+          class="project-hero-image"
+        />
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Business Scenario</h2>
+
+      <div class="content-box">
+        <p>
+          A fictional organization needed to prepare a new Microsoft Entra ID tenant for identity administration.
+          Before additional users could be onboarded, the tenant required an operational administrator account with
+          appropriate permissions to manage users, roles, licenses, and directory settings.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Project Objectives</h2>
+
+      <div class="content-box">
+        <ul>
+          <li>Create the first operational administrator account in Microsoft Entra ID.</li>
+          <li>Validate the new administrator account in the tenant user list.</li>
+          <li>Assign the Global Administrator role for initial tenant setup activities.</li>
+          <li>Document user lifecycle steps in a clear, recruiter-friendly implementation format.</li>
+          <li>Demonstrate understanding of identity administration, role assignment, and tenant setup.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Environment</h2>
+
+      <div class="content-box">
+        <ul>
+          <li><strong>Platform:</strong> Microsoft Entra admin center</li>
+          <li><strong>Tenant Type:</strong> Non-production Microsoft Entra ID test tenant</li>
+          <li><strong>Account Type:</strong> Cloud-only user account</li>
+          <li><strong>Role Assigned:</strong> Global Administrator</li>
+          <li><strong>Purpose:</strong> Initial tenant administration and user lifecycle management</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Implementation Steps</h2>
+
+      <div class="content-box">
+        <ol>
+          <li>Navigated to Microsoft Entra admin center and opened the Users blade.</li>
+          <li>Selected <strong>New user</strong> to begin creating an operational administrator account.</li>
+          <li>Entered required identity information including username, display name, and profile properties.</li>
+          <li>Assigned the <strong>Global Administrator</strong> role during account creation.</li>
+          <li>Reviewed the account details and created the user.</li>
+          <li>Validated that the administrator account appeared successfully in the tenant user list.</li>
+          <li>Opened the user profile to confirm account details and assigned role configuration.</li>
+          <li>Verified the tenant user count after the new administrator account was created.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Security Considerations</h2>
+
+      <div class="content-box">
+        <ul>
+          <li><strong>Least Privilege:</strong> High-privilege roles should only be assigned when required for tenant setup or administration.</li>
+          <li><strong>Administrative Separation:</strong> Administrative accounts should be separate from normal daily-use accounts.</li>
+          <li><strong>Auditability:</strong> Administrator creation and role assignment should be documented for review and accountability.</li>
+          <li><strong>Non-Production Scope:</strong> This implementation was completed in a test tenant for portfolio and lab documentation purposes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Skills Demonstrated</h2>
+
+      <div class="skills-grid">
+        <div class="skill-item">
+          <h4>Microsoft Entra ID Administration</h4>
+          <p>Created and validated a cloud-only administrator account in Microsoft Entra ID.</p>
+        </div>
+
+        <div class="skill-item">
+          <h4>Role-Based Access Control</h4>
+          <p>Assigned and verified an administrative directory role for tenant management.</p>
+        </div>
+
+        <div class="skill-item">
+          <h4>User Lifecycle Management</h4>
+          <p>Documented identity creation, validation, and administrative readiness steps.</p>
+        </div>
+
+        <div class="skill-item">
+          <h4>Technical Documentation</h4>
+          <p>Created a visual workflow and written an implementation summary for portfolio review.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Lessons Learned</h2>
+
+      <div class="content-box">
+        <ul>
+          <li>Initial tenant setup requires a clear administrative identity strategy.</li>
+          <li>Privileged accounts should be documented and monitored because they can control tenant-wide identity settings.</li>
+          <li>Visual documentation makes identity workflows easier to explain during interviews and technical reviews.</li>
+          <li>Portfolio projects are stronger when they show both the technical steps and the security reasoning behind them.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 IAM Portfolio. Built for professional Identity & Access Management documentation.</p>
+  </footer>
+
+  <script src="../script.js"></script>
 </body>
 </html>
