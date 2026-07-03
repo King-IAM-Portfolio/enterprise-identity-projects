@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User Lifecycle Management - Implement automated provisioning and deprovisioning workflows.">
+    <title>User Lifecycle Management | IAM Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../dark-mode.css" id="dark-mode-link">
+    <style>
+        .project-detail {
+            padding: var(--spacing-3xl) var(--spacing-lg);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: var(--spacing-2xl);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .project-header {
+            margin-bottom: var(--spacing-2xl);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: var(--spacing-2xl);
+        }
+        .project-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: var(--spacing-lg);
+        }
+        .project-info h1 {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--spacing-md);
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .status-planned {
+            background-color: #FFB900;
+            color: #333;
+        }
+        .status-progress {
+            background-color: #0078D4;
+            color: white;
+        }
+        .status-completed {
+            background-color: #107C10;
+            color: white;
+        }
+        .project-section {
+            margin-bottom: var(--spacing-2xl);
+        }
+        .project-section h2 {
+            font-size: var(--font-size-xl);
+            color: var(--primary);
+            margin-bottom: var(--spacing-lg);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--border);
+        }
+        .project-section h3 {
+            font-size: var(--font-size-lg);
+            color: var(--text-primary);
+            margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+        }
+        .content-box {
+            background-color: var(--surface);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            margin: var(--spacing-lg) 0;
+            border-left: 4px solid var(--primary);
+        }
+        .placeholder-box {
+            background-color: var(--surface);
+            border: 2px dashed var(--border);
+            padding: var(--spacing-2xl);
+            border-radius: 8px;
+            text-align: center;
+            color: var(--text-secondary);
+            margin: var(--spacing-lg) 0;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .skill-item {
+            background-color: var(--surface);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+        }
+        .skill-item h4 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        ul, ol {
+            margin-left: var(--spacing-xl);
+            color: var(--text-secondary);
+        }
+        li {
+            margin-bottom: var(--spacing-md);
+            line-height: 1.7;
+        }
+        strong {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>IAM Portfolio</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#projects" class="nav-link">Projects</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <button class="theme-toggle" id="theme-toggle">🌙</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container project-detail">
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+
+        <div class="project-header">
+            <div class="project-title">
+                <div class="project-info">
+                    <h1>User Lifecycle Management</h1>
+                    <p>Implement automated provisioning and deprovisioning workflows for user accounts across cloud and on-premises systems</p>
+                </div>
+                <span class="status-badge status-planned">Planned</span>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="project-section">
+            <h2>Executive Summary</h2>
+            <div class="content-box">
+                <p>
+                    This project demonstrates the implementation of automated user lifecycle management in Microsoft Entra ID, 
+                    covering the entire user journey from initial provisioning through active management to offboarding. 
+                    The solution integrates HR systems, cloud applications, and on-premises infrastructure to ensure consistent 
+                    identity governance and access controls throughout the user lifecycle.
+                </p>
+            </div>
+        </div>
+
+        <!-- Business Scenario -->
+        <div class="project-section">
+            <h2>Business Scenario</h2>
+            <div class="content-box">
+                <p><strong>Situation:</strong> [Placeholder - Document your organization's specific scenario]</p>
+                <p style="margin-top: var(--spacing-md);">
+                    Example considerations:
+                </p>
+                <ul>
+                    <li>Organization size and user population</li>
+                    <li>On-premises infrastructure and cloud adoption stage</li>
+                    <li>Current identity provisioning challenges</li>
+                    <li>Integration requirements with HR systems</li>
+                    <li>Regulatory or compliance requirements</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Objectives -->
+        <div class="project-section">
+            <h2>Business Objectives</h2>
+            <div class="content-box">
+                <ul>
+                    <li>Automate user account creation based on HR data</li>
+                    <li>Ensure consistent provisioning across cloud and on-premises systems</li>
+                    <li>Implement automated offboarding and access revocation</li>
+                    <li>Reduce manual identity management overhead</li>
+                    <li>Improve security posture through consistent access controls</li>
+                    <li>Enable compliance with audit and retention policies</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Environment -->
+        <div class="project-section">
+            <h2>Environment</h2>
+            <div class="content-box">
+                <h3>Infrastructure Components</h3>
+                <p><strong>Placeholder:</strong> Document your lab or production environment configuration including:</p>
+                <ul>
+                    <li>Microsoft Entra ID tenant and licensing</li>
+                    <li>On-premises Active Directory (if applicable)</li>
+                    <li>Azure AD Connect configuration</li>
+                    <li>HR system or identity source</li>
+                    <li>Cloud applications and SaaS solutions</li>
+                    <li>Synchronization tools and APIs</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Architecture Diagram -->
+        <div class="project-section">
+            <h2>Architecture Diagram</h2>
+            <div class="placeholder-box">
+                [Placeholder: Add architecture diagram showing user lifecycle flow,
+                <br>provisioning sources, and target systems]
+            </div>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="project-section">
+            <h2>Technologies Used</h2>
+            <div class="content-box">
+                <ul>
+                    <li>Microsoft Entra ID (Azure AD)</li>
+                    <li>Azure AD Connect</li>
+                    <li>Microsoft Entra ID Provisioning Service</li>
+                    <li>Microsoft Graph API</li>
+                    <li>Active Directory (on-premises)</li>
+                    <li>HR system connectors</li>
+                    <li>PowerShell automation</li>
+                    <li>Azure Logic Apps (optional)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Implementation Steps -->
+        <div class="project-section">
+            <h2>Implementation Steps</h2>
+            <div class="placeholder-box">
+                [Placeholder: Document your step-by-step implementation process including:
+                <br>1. Assessment and planning
+                <br>2. HR system integration
+                <br>3. Entra ID provisioning configuration
+                <br>4. Attribute mapping
+                <br>5. Testing and validation
+                <br>6. Pilot deployment
+                <br>7. Production rollout]
+            </div>
+        </div>
+
+        <!-- Validation & Testing -->
+        <div class="project-section">
+            <h2>Validation & Testing</h2>
+            <div class="placeholder-box">
+                [Placeholder: Document your testing approach including:
+                <br>- Test scenarios for provisioning workflows
+                <br>- Validation of attribute synchronization
+                <br>- Testing of deprovisioning workflows
+                <br>- Compliance verification
+                <br>- Performance testing results]
+            </div>
+        </div>
+
+        <!-- Screenshots -->
+        <div class="project-section">
+            <h2>Annotated Screenshots</h2>
+            <div class="placeholder-box">
+                [Placeholder: Add annotated screenshots showing:
+                <br>- Entra ID provisioning configuration
+                <br>- User creation workflows
+                <br>- Attribute mapping
+                <br>- Monitoring and logs]
+            </div>
+        </div>
+
+        <!-- Security Considerations -->
+        <div class="project-section">
+            <h2>Security Considerations</h2>
+            <div class="content-box">
+                <ul>
+                    <li><strong>Data Privacy:</strong> Sensitive HR data protection and minimal data disclosure</li>
+                    <li><strong>Access Control:</strong> Principle of least privilege for provisioning service accounts</li>
+                    <li><strong>Audit Logging:</strong> Comprehensive logging of all provisioning activities</li>
+                    <li><strong>API Security:</strong> Secure authentication and encryption for HR system integration</li>
+                    <li><strong>Deprovisioning:</strong> Immediate access revocation upon termination</li>
+                    <li><strong>Error Handling:</strong> Secure management of failed provisioning attempts</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Lessons Learned -->
+        <div class="project-section">
+            <h2>Lessons Learned</h2>
+            <div class="placeholder-box">
+                [Placeholder: Document key learnings from implementation including:
+                <br>- Technical challenges encountered
+                <br>- Solutions implemented
+                <br>- Best practices discovered
+                <br>- Recommendations for similar projects]
+            </div>
+        </div>
+
+        <!-- Skills Demonstrated -->
+        <div class="project-section">
+            <h2>Skills Demonstrated</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>Identity Provisioning</h4>
+                    <p>Design and configuration of automated provisioning workflows using Entra ID provisioning service</p>
+                </div>
+                <div class="skill-item">
+                    <h4>System Integration</h4>
+                    <p>Integration between HR systems, Entra ID, and on-premises Active Directory</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Attribute Mapping</h4>
+                    <p>Complex attribute transformation and mapping between systems</p>
+                </div>
+                <div class="skill-item">
+                    <h4>API Development</h4>
+                    <p>Use of Microsoft Graph API for identity automation and reporting</p>
+                </div>
+                <div class="skill-item">
+                    <h4>PowerShell Scripting</h4>
+                    <p>Automation scripts for provisioning workflows and compliance</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Security & Compliance</h4>
+                    <p>Implementation of security controls and audit compliance</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interview Talking Points -->
+        <div class="project-section">
+            <h2>Interview Talking Points</h2>
+            <div class="content-box">
+                <h3>Key Discussion Topics</h3>
+                <ul>
+                    <li><strong>Challenge:</strong> How do you handle complex attribute mapping scenarios?</li>
+                    <li><strong>Approach:</strong> Best practices for testing provisioning workflows before production deployment</li>
+                    <li><strong>Problem-Solving:</strong> How to handle failed provisioning attempts and maintain consistency</li>
+                    <li><strong>Scale:</strong> How to manage provisioning for large user populations efficiently</li>
+                    <li><strong>Integration:</strong> Challenges integrating legacy HR systems with modern cloud identity platforms</li>
+                    <li><strong>Compliance:</strong> How provisioning automation helps meet regulatory requirements</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- References -->
+        <div class="project-section">
+            <h2>References & Resources</h2>
+            <div class="content-box">
+                <ul>
+                    <li><a href="https://learn.microsoft.com/en-us/entra/identity/app-provisioning/" target="_blank" rel="noopener noreferrer">Microsoft Entra ID Provisioning Documentation</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/entra/identity/hybrid/" target="_blank" rel="noopener noreferrer">Hybrid Identity Documentation</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/graph/api/overview" target="_blank" rel="noopener noreferrer">Microsoft Graph API Reference</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/powershell/module/az.resources/" target="_blank" rel="noopener noreferrer">Azure PowerShell Reference</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Identity & Access Management Portfolio. All rights reserved.</p>
+            <p>Hands-on Microsoft Entra ID and enterprise identity implementations.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

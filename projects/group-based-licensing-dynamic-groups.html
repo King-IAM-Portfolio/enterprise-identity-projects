@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Group-Based Licensing & Dynamic Groups - Efficient software licensing at scale.">
+    <title>Group-Based Licensing & Dynamic Groups | IAM Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../dark-mode.css" id="dark-mode-link">
+    <style>
+        .project-detail {
+            padding: var(--spacing-3xl) var(--spacing-lg);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: var(--spacing-2xl);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .project-header {
+            margin-bottom: var(--spacing-2xl);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: var(--spacing-2xl);
+        }
+        .project-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: var(--spacing-lg);
+        }
+        .project-info h1 {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--spacing-md);
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .status-planned {
+            background-color: #FFB900;
+            color: #333;
+        }
+        .status-progress {
+            background-color: #0078D4;
+            color: white;
+        }
+        .status-completed {
+            background-color: #107C10;
+            color: white;
+        }
+        .project-section {
+            margin-bottom: var(--spacing-2xl);
+        }
+        .project-section h2 {
+            font-size: var(--font-size-xl);
+            color: var(--primary);
+            margin-bottom: var(--spacing-lg);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--border);
+        }
+        .project-section h3 {
+            font-size: var(--font-size-lg);
+            color: var(--text-primary);
+            margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+        }
+        .content-box {
+            background-color: var(--surface);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            margin: var(--spacing-lg) 0;
+            border-left: 4px solid var(--primary);
+        }
+        .placeholder-box {
+            background-color: var(--surface);
+            border: 2px dashed var(--border);
+            padding: var(--spacing-2xl);
+            border-radius: 8px;
+            text-align: center;
+            color: var(--text-secondary);
+            margin: var(--spacing-lg) 0;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+        }
+        .skill-item {
+            background-color: var(--surface);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+        }
+        .skill-item h4 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        ul, ol {
+            margin-left: var(--spacing-xl);
+            color: var(--text-secondary);
+        }
+        li {
+            margin-bottom: var(--spacing-md);
+            line-height: 1.7;
+        }
+        strong {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>IAM Portfolio</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#projects" class="nav-link">Projects</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <button class="theme-toggle" id="theme-toggle">🌙</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container project-detail">
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+
+        <div class="project-header">
+            <div class="project-title">
+                <div class="project-info">
+                    <h1>Group-Based Licensing & Dynamic Groups</h1>
+                    <p>Leverage dynamic group membership and group-based licensing for efficient software licensing and access management</p>
+                </div>
+                <span class="status-badge status-planned">Planned</span>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="project-section">
+            <h2>Executive Summary</h2>
+            <div class="content-box">
+                <p>
+                    This project demonstrates the implementation of group-based licensing and dynamic group membership rules in 
+                    Microsoft Entra ID, enabling automated license assignment and access control based on user attributes. 
+                    This approach reduces manual overhead, ensures consistent licensing assignments, and simplifies compliance reporting.
+                </p>
+            </div>
+        </div>
+
+        <!-- Business Scenario -->
+        <div class="project-section">
+            <h2>Business Scenario</h2>
+            <div class="content-box">
+                <p><strong>Situation:</strong> [Placeholder - Document your organization's licensing challenges]</p>
+                <p style="margin-top: var(--spacing-md);">
+                    Example considerations:
+                </p>
+                <ul>
+                    <li>Manual licensing assignment overhead</li>
+                    <li>License utilization and compliance tracking</li>
+                    <li>Role-based application access requirements</li>
+                    <li>Department or location-based licensing strategies</li>
+                    <li>Cost optimization through efficient licensing</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Objectives -->
+        <div class="project-section">
+            <h2>Business Objectives</h2>
+            <div class="content-box">
+                <ul>
+                    <li>Automate Microsoft 365 and application license assignment</li>
+                    <li>Implement dynamic group membership based on user attributes</li>
+                    <li>Reduce manual license management tasks</li>
+                    <li>Ensure consistent licensing across the organization</li>
+                    <li>Improve compliance and license utilization reporting</li>
+                    <li>Enable self-service access to applications through groups</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Environment -->
+        <div class="project-section">
+            <h2>Environment</h2>
+            <div class="content-box">
+                <h3>Infrastructure Components</h3>
+                <p><strong>Placeholder:</strong> Document your environment including:</p>
+                <ul>
+                    <li>Microsoft Entra ID tenant and licensing SKUs</li>
+                    <li>Microsoft 365 subscription plans</li>
+                    <li>SaaS applications requiring licensing</li>
+                    <li>User attribute schema and data</li>
+                    <li>Active Directory infrastructure (if hybrid)</li>
+                    <li>Licensing and cost management tools</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Architecture Diagram -->
+        <div class="project-section">
+            <h2>Architecture Diagram</h2>
+            <div class="placeholder-box">
+                [Placeholder: Add architecture diagram showing:
+                <br>- Dynamic group membership rules
+                <br>- License assignment flows
+                <br>- Application access provisioning]
+            </div>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="project-section">
+            <h2>Technologies Used</h2>
+            <div class="content-box">
+                <ul>
+                    <li>Microsoft Entra ID (Azure AD)</li>
+                    <li>Dynamic Groups</li>
+                    <li>Group-Based Licensing</li>
+                    <li>Microsoft 365 Admin Center</li>
+                    <li>Microsoft Graph API</li>
+                    <li>PowerShell automation</li>
+                    <li>Azure AD Connect (for hybrid scenarios)</li>
+                    <li>Compliance Manager</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Implementation Steps -->
+        <div class="project-section">
+            <h2>Implementation Steps</h2>
+            <div class="placeholder-box">
+                [Placeholder: Document your implementation including:
+                <br>1. Assessment of user attributes for grouping
+                <br>2. Dynamic group rule design
+                <br>3. License SKU mapping
+                <br>4. Test group creation and validation
+                <br>5. Production group deployment
+                <br>6. Pilot licensing assignment
+                <br>7. Full rollout]
+            </div>
+        </div>
+
+        <!-- Validation & Testing -->
+        <div class="project-section">
+            <h2>Validation & Testing</h2>
+            <div class="placeholder-box">
+                [Placeholder: Document testing approach including:
+                <br>- Dynamic group membership validation
+                <br>- License assignment verification
+                <br>- Compliance with licensing rules
+                <br>- Performance testing with large user populations
+                <br>- Pilot user feedback]
+            </div>
+        </div>
+
+        <!-- Screenshots -->
+        <div class="project-section">
+            <h2>Annotated Screenshots</h2>
+            <div class="placeholder-box">
+                [Placeholder: Add annotated screenshots showing:
+                <br>- Dynamic group rule configuration
+                <br>- Group membership results
+                <br>- License assignment
+                <br>- Licensing reports and dashboards]
+            </div>
+        </div>
+
+        <!-- Security Considerations -->
+        <div class="project-section">
+            <h2>Security Considerations</h2>
+            <div class="content-box">
+                <ul>
+                    <li><strong>Attribute Validation:</strong> Ensure accurate user attribute data used for group membership</li>
+                    <li><strong>Access Control:</strong> Restrict who can modify dynamic group rules</li>
+                    <li><strong>License Compliance:</strong> Prevent over-licensing and license violations</li>
+                    <li><strong>Audit Logging:</strong> Track all group membership and license changes</li>
+                    <li><strong>Data Accuracy:</strong> Regular validation of group membership rules</li>
+                    <li><strong>License Reclamation:</strong> Automatic removal of licenses upon group membership change</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Lessons Learned -->
+        <div class="project-section">
+            <h2>Lessons Learned</h2>
+            <div class="placeholder-box">
+                [Placeholder: Document learnings including:
+                <br>- Best practices for dynamic group rules
+                <br>- Complex attribute scenarios
+                <br>- License optimization strategies
+                <br>- Performance considerations]
+            </div>
+        </div>
+
+        <!-- Skills Demonstrated -->
+        <div class="project-section">
+            <h2>Skills Demonstrated</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>Dynamic Groups</h4>
+                    <p>Design and implementation of complex dynamic group membership rules</p>
+                </div>
+                <div class="skill-item">
+                    <h4>License Management</h4>
+                    <p>Group-based licensing strategy and implementation</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Attribute Management</h4>
+                    <p>User attribute schema design for group membership rules</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Cost Optimization</h4>
+                    <p>Optimization of licensing costs through efficient assignment</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Compliance Reporting</h4>
+                    <p>License compliance tracking and reporting</p>
+                </div>
+                <div class="skill-item">
+                    <h4>PowerShell Scripting</h4>
+                    <p>Automation of licensing and group management tasks</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interview Talking Points -->
+        <div class="project-section">
+            <h2>Interview Talking Points</h2>
+            <div class="content-box">
+                <h3>Key Discussion Topics</h3>
+                <ul>
+                    <li><strong>Scalability:</strong> How to manage dynamic groups for large organizations</li>
+                    <li><strong>Complexity:</strong> Designing rules for complex membership scenarios</li>
+                    <li><strong>Cost:</strong> How group-based licensing reduces licensing costs</li>
+                    <li><strong>Compliance:</strong> Ensuring license compliance through automated assignment</li>
+                    <li><strong>Attribute Strategy:</strong> Designing user attributes to support group membership rules</li>
+                    <li><strong>Performance:</strong> Optimizing group membership evaluation performance</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- References -->
+        <div class="project-section">
+            <h2>References & Resources</h2>
+            <div class="content-box">
+                <ul>
+                    <li><a href="https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership-rules" target="_blank" rel="noopener noreferrer">Dynamic Group Membership Rules</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/entra/identity/users/licensing-group-overview" target="_blank" rel="noopener noreferrer">Group-Based Licensing</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/microsoft-365/admin/manage/assign-licenses-to-users" target="_blank" rel="noopener noreferrer">Assign Licenses to Users</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/powershell/module/msonline/" target="_blank" rel="noopener noreferrer">MSOnline PowerShell</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Identity & Access Management Portfolio. All rights reserved.</p>
+            <p>Hands-on Microsoft Entra ID and enterprise identity implementations.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
