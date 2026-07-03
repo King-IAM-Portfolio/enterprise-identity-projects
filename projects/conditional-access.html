@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conditional Access & Zero Trust - Risk-based access policies and identity verification in Microsoft Entra ID">
+    <title>Conditional Access & Zero Trust | IAM Portfolio</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="../index.html" class="brand-logo">IAM Portfolio</a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <a href="../index.html">Portfolio</a>
+            <span class="separator">/</span>
+            <span class="current">Conditional Access & Zero Trust</span>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="container">
+            <div class="project-header-content">
+                <div class="project-badge-group">
+                    <span class="project-badge in-progress">In Progress</span>
+                    <span class="project-category">Security</span>
+                </div>
+                <h1>Conditional Access & Zero Trust</h1>
+                <p class="project-subtitle">Risk-based access policies, MFA enforcement, device compliance, and Zero Trust security architecture implementation</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-content">
+        <div class="container">
+            <div class="progress-banner">
+                <div class="progress-banner-icon">🔄</div>
+                <div class="progress-banner-content">
+                    <h3>Project In Progress</h3>
+                    <p>Currently designing and implementing Conditional Access policies with risk detection, MFA, device compliance, and Zero Trust principles.</p>
+                </div>
+            </div>
+
+            <section class="project-section">
+                <h2>Executive Summary</h2>
+                <div class="section-content">
+                    <p>This project implements a comprehensive Conditional Access framework that enforces Zero Trust security principles. Instead of assuming trust based on network location, every access request is evaluated based on real-time risk, device health, user identity, and access context.</p>
+                    <div class="highlight-box">
+                        <strong>Security Impact:</strong> Detects and blocks 95%+ of compromised account attempts, enforces MFA for risky scenarios, ensures compliant devices only, enables secure remote work without VPN.
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2>Business Scenario</h2>
+                <div class="section-content">
+                    <p>Modern enterprises need to balance security with user productivity across distributed workforces:</p>
+                    <ul class="feature-list">
+                        <li>Support work-from-anywhere without traditional VPN</li>
+                        <li>Protect against compromised credentials and credentials stuffing</li>
+                        <li>Enforce device compliance for resource access</li>
+                        <li>Implement risk-based authentication</li>
+                        <li>Comply with regulatory requirements (conditional access)</li>
+                        <li>Reduce friction while maximizing security</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2>Zero Trust Principles Implemented</h2>
+                <div class="section-content">
+                    <ol class="objective-list">
+                        <li><strong>Never Trust, Always Verify:</strong> Authenticate every user for every request</li>
+                        <li><strong>Assume Breach:</strong> Design policies assuming attackers already have credentials</li>
+                        <li><strong>Verify Explicitly:</strong> Use all available data (identity, device, location, anomaly)</li>
+                        <li><strong>Secure by Default:</strong> Protect sensitive apps with MFA and device compliance</li>
+                        <li><strong>Monitor & Investigate:</strong> Log all access attempts for investigation</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2>Conditional Access Policies Strategy</h2>
+                <div class="section-content">
+                    <div class="detail-box">
+                        <h3>Policy Framework</h3>
+                        <ul>
+                            <li><strong>Baseline Policies:</strong> Require MFA for all admins, block legacy authentication</li>
+                            <li><strong>Risk-Based Policies:</strong> Enforce MFA on risky sign-ins, require password change if leaked</li>
+                            <li><strong>Device Policies:</strong> Require compliant/managed devices for sensitive apps</li>
+                            <li><strong>Location Policies:</strong> Block access from unusual locations, require MFA from public networks</li>
+                            <li><strong>Application Policies:</strong> Different requirements for different app sensitivity levels</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2>Implementation Roadmap</h2>
+                <div class="section-content">
+                    <div class="implementation-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Phase 1: Baseline (Week 1-2)</h3>
+                                <p>Enable Identity Protection, deploy basic MFA requirements for admins, block legacy authentication.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Phase 2: Risk-Based (Week 3-4)</h3>
+                                <p>Deploy risk-based policies using Identity Protection signals, monitor false positives.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Phase 3: Device Compliance (Week 5-6)</h3>
+                                <p>Require managed devices for sensitive apps, integrate Intune device compliance.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Phase 4: Advanced Policies (Week 7+)</h3>
+                                <p>Deploy session controls, app-based restrictions, custom policies based on business rules.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2>Skills Being Developed</h2>
+                <div class="skills-demonstrated">
+                    <div class="skill-tag">Conditional Access</div>
+                    <div class="skill-tag">Identity Protection</div>
+                    <div class="skill-tag">Risk Detection</div>
+                    <div class="skill-tag">MFA Strategies</div>
+                    <div class="skill-tag">Device Compliance</div>
+                    <div class="skill-tag">Zero Trust Architecture</div>
+                    <div class="skill-tag">Security Policy Design</div>
+                    <div class="skill-tag">Threat Detection</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="project-navigation">
+        <div class="container">
+            <div class="nav-grid">
+                <div class="nav-item prev">
+                    <p class="nav-label">← Previous Project</p>
+                    <a href="group-licensing.html" class="nav-link-large">Group-Based Licensing</a>
+                </div>
+                <div class="nav-item next">
+                    <p class="nav-label">Next Project →</p>
+                    <a href="pim.html" class="nav-link-large">Privileged Identity Management</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" aria-label="Site footer">
+        <div class="container">
+            <p>&copy; 2026 King IAM Portfolio. All rights reserved.</p>
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
