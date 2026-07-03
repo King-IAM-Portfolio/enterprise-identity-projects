@@ -1,74 +1,68 @@
-# Identity & Access Management Portfolio
+# Enterprise Identity & Access Management Portfolio
 
-A modern, responsive GitHub Pages portfolio showcasing Microsoft Entra ID administration, Identity Governance, Conditional Access, and Zero Trust security implementations.
+A professional portfolio showcasing expertise in Microsoft Entra ID administration, Identity Governance, Conditional Access, Privileged Access Management, and enterprise security solutions.
 
-## Features
+## 🎯 About This Portfolio
 
-✨ **Enterprise Design**
-- Microsoft Fluent-inspired design system
-- White background with blue accents (#0078D4)
-- Professional, minimal, recruiter-friendly aesthetic
-- Clean and modern typography
+This repository contains a GitHub Pages-hosted portfolio demonstrating real-world enterprise identity and access management implementations. The portfolio highlights expertise in:
 
-🌙 **Dark Mode Toggle**
-- System preference detection
-- localStorage persistence
-- Smooth theme transitions
+- **Microsoft Entra ID (Azure AD)** - Enterprise directory and identity services
+- **Identity Governance** - Access reviews, entitlement management, lifecycle workflows
+- **Conditional Access** - Zero-trust policies, risk-based authentication, device compliance
+- **Privileged Access Management** - Just-in-time access, approval workflows, comprehensive auditing
+- **B2B Integration** - Multi-tenant federation, guest management, secure collaboration
+- **Security & Compliance** - Audit trails, regulatory frameworks (SOC 2, ISO 27001, NIST, HIPAA)
 
-📱 **Responsive & Mobile-First**
-- Mobile-optimized navigation
-- Responsive grid layouts
-- Touch-friendly interfaces
-- Works on all device sizes
+## 📊 Featured Projects
 
-⚡ **Performance Optimized**
-- Pure vanilla HTML5, CSS3, and JavaScript
-- No framework dependencies
-- Lightweight (~50KB total)
-- Fast page load times
-- Optimized for GitHub Pages
+1. **Entra ID Architecture** - Enterprise-scale hybrid identity deployment with 50,000+ users
+2. **Identity Governance Framework** - Automated access reviews and entitlement management
+3. **Conditional Access Strategy** - Zero-trust security with risk-based authentication
+4. **Privileged Identity Management** - Just-in-time access and comprehensive audit logging
+5. **Multi-Tenant B2B Integration** - Secure cross-organization collaboration
+6. **Security Compliance & Monitoring** - Regulatory compliance and security monitoring
 
-♿ **Accessibility**
-- Semantic HTML structure
-- ARIA labels and roles
-- Keyboard navigation support
-- Focus indicators
-- High contrast support
+## 🌐 View the Portfolio
 
-🎯 **Interactive Features**
-- Smooth scroll navigation
-- Active section highlighting
-- Fade-in animations for cards
-- Intersection Observer for performance
-- Mobile menu toggle
+Visit the live portfolio:
 
-## Project Structure
+**[https://King-IAM-Portfolio.github.io/enterprise-identity-projects](https://King-IAM-Portfolio.github.io/enterprise-identity-projects)**
+
+### Features
+- 🎨 Professional Microsoft Fluent design
+- 🌙 Dark mode support with system preference detection
+- 📱 Fully responsive mobile-first design
+- ⚡ Lightweight vanilla JavaScript (no frameworks)
+- ♿ WCAG 2.1 Level AA accessibility
+- 🚀 GitHub Pages optimized
+
+## 🛠️ Technology Stack
+
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript (ES6+)
+- **Design System**: Microsoft Fluent-inspired
+- **Hosting**: GitHub Pages
+- **Performance**: <1s page load, Lighthouse 90+
+
+## 📁 Repository Structure
 
 ```
 .
-├── index.html                 # Main landing page
-├── assets/
-│   ├── css/
-│   │   ├── style.css         # Main stylesheet
-│   │   └── dark-mode.css     # Dark mode overrides
-│   └── js/
-│       └── script.js          # Vanilla JavaScript
-├── projects/                  # Project detail pages
-│   ├── user-lifecycle.html
-│   ├── group-licensing.html
-│   ├── conditional-access.html
-│   ├── pim.html
+├── index.html                 # Main homepage
+├── style.css                  # Primary stylesheet
+├── dark-mode.css             # Dark mode theme
+├── script.js                 # Vanilla JavaScript
+├── projects/                 # Project detail pages
+│   ├── entra-id-architecture.html
 │   ├── identity-governance.html
-│   ├── enterprise-apps.html
-│   ├── hybrid-identity.html
-│   ├── microsoft-graph.html
-│   ├── audit-monitoring.html
-│   └── zero-trust.html
-├── README.md                  # This file
-└── .gitignore
+│   ├── conditional-access.html
+│   ├── privileged-access.html
+│   ├── multi-tenant.html
+│   └── security-compliance.html
+├── assets/                   # Screenshots and diagrams (placeholder)
+└── README.md                 # This file
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Local Development
 
@@ -78,7 +72,7 @@ git clone https://github.com/King-IAM-Portfolio/enterprise-identity-projects.git
 cd enterprise-identity-projects
 ```
 
-2. Serve locally:
+2. Start a local server:
 ```bash
 # Python 3
 python -m http.server 8000
@@ -86,158 +80,143 @@ python -m http.server 8000
 # Python 2
 python -m SimpleHTTPServer 8000
 
-# Node.js (if http-server is installed)
+# Node.js
 http-server
 ```
 
-3. Open your browser and navigate to `http://localhost:8000`
+3. Open `http://localhost:8000` in your browser
 
-### Deploy to GitHub Pages
+### GitHub Pages Deployment
 
-1. Push changes to the `main` branch
-2. Go to repository Settings → Pages
-3. Select `main` branch as source
-4. Save and wait for deployment
-5. Visit `https://King-IAM-Portfolio.github.io/enterprise-identity-projects`
+The portfolio is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
-## Customization
+1. Enable GitHub Pages in repository settings
+2. Select `main` branch as source
+3. Site will be available at: `https://King-IAM-Portfolio.github.io/enterprise-identity-projects`
+
+## 🎨 Customization
 
 ### Update Contact Information
 
-Edit `index.html`:
-- Line 438: GitHub URL
-- Line 447: LinkedIn URL
-- Line 457: Email address
+Edit `index.html` (around line 250):
+- GitHub: Update the GitHub profile URL
+- LinkedIn: Add LinkedIn profile URL
+- Email: Update contact email address
 
-### Change Color Scheme
+### Modify Color Scheme
 
-Edit `assets/css/style.css` (root variables):
+Edit `style.css` (`:root` section):
 ```css
 --primary: #0078D4;           /* Main blue */
---primary-dark: #005A9E;      /* Darker blue for hover */
+--primary-dark: #005A9E;      /* Darker blue */
 --background: #FFFFFF;        /* Background */
 --text-primary: #242424;      /* Text color */
 ```
 
-### Customize Content
+### Add Project Screenshots
 
-Edit `index.html` sections:
-- Hero title and description
-- Project cards and descriptions
-- Skills list
-- About section
-- Footer copyright year
+1. Create `assets/` folder with image subdirectories
+2. Add screenshots and architecture diagrams
+3. Reference in project pages with proper alt text
 
-## Browser Support
+## 📊 Performance
+
+- **Page Load Time**: < 1 second
+- **Lighthouse Score**: 90+
+- **Total Page Size**: ~50KB
+- **CSS**: ~15KB
+- **JavaScript**: ~8KB
+- **No external dependencies**
+
+## ♿ Accessibility
+
+- WCAG 2.1 Level AA compliant
+- Semantic HTML structure
+- ARIA labels and roles
+- Keyboard navigation support
+- Focus indicators
+- High contrast mode support
+- Color contrast: 4.5:1+
+
+## 🔐 Browser Support
 
 - Chrome/Edge: Latest 2 versions
 - Firefox: Latest 2 versions
 - Safari: Latest 2 versions
 - Mobile browsers: iOS Safari 12+, Chrome Android
 
-## Performance Metrics
+## 📝 Content Areas
 
-- Page Load: < 1s
-- Lighthouse Score: 90+
-- CSS: ~15KB (minified)
-- JavaScript: ~8KB
-- Total Page Size: ~50KB
+### Home Section
+- Hero banner with call-to-action
+- Professional navigation
+- Dark mode toggle
 
-## Accessibility Compliance
+### About Section
+- Professional background
+- Expertise summary
+- Key focus areas
 
-- WCAG 2.1 Level AA
-- Semantic HTML5 structure
-- ARIA labels and roles
-- Keyboard navigation
-- Focus indicators
-- Color contrast: 4.5:1+
+### Projects Section
+- 6 featured project cards
+- Project descriptions and tags
+- Technology badges
+- Links to detailed project pages
 
-## Technology Stack
+### Skills Section
+- Identity Platforms
+- Security & Access
+- Enterprise Systems
+- Frameworks & Standards
 
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with variables
-- **JavaScript**: Vanilla ES6+
-- **Hosting**: GitHub Pages
-- **Icons**: Inline SVGs
+### Contact Section
+- GitHub profile link
+- LinkedIn profile link
+- Email contact
+- Professional networking links
 
-## Features Breakdown
+## 🔄 Updates & Maintenance
 
-### Theme Toggle
-- Detects system preference
-- Saves user choice in localStorage
-- Smooth transitions
-- Works across page reloads
+1. To update project details, edit the corresponding HTML file in `projects/`
+2. To add new projects, create a new HTML file and link it from `index.html`
+3. Test locally before pushing to main branch
+4. Changes auto-deploy to GitHub Pages within seconds
 
-### Mobile Navigation
-- Hamburger menu on mobile
-- Click outside to close
-- Escape key to close
-- Auto-close on link click
+## 📋 Compliance & Standards
 
-### Scroll Spy
-- Highlights active section
-- Updates during scroll
-- Smooth scroll offset for navbar
+- SOC 2 Type II friendly structure
+- NIST Cybersecurity Framework aligned
+- ISO 27001 compliant documentation
+- HIPAA-friendly design patterns
+- GDPR consideration for analytics
 
-### Animations
-- Fade-in cards on scroll
-- Hover effects on interactive elements
-- Smooth color transitions
-- Performant: uses Intersection Observer
+## 🎯 Best Practices Implemented
 
-## Project Pages Template
+- ✅ Responsive design (mobile-first)
+- ✅ Semantic HTML5
+- ✅ CSS custom properties (variables)
+- ✅ Vanilla JavaScript (no dependencies)
+- ✅ Accessibility standards
+- ✅ Performance optimization
+- ✅ Dark mode support
+- ✅ Progressive enhancement
+- ✅ SEO-friendly structure
+- ✅ Cross-browser compatibility
 
-Each project page includes:
-- Overview section
-- Business scenario
-- Project objectives
-- Architecture diagram placeholder
-- Step-by-step implementation guide
-- Screenshots section
-- Security best practices
-- Lessons learned
-- Skills demonstrated
-- Technologies used
+## 📞 Support & Questions
 
-## SEO Optimization
-
-- Meta description
-- Semantic HTML structure
-- Open Graph tags ready
-- Mobile viewport configuration
-- Fast page load times
-- Responsive design
-
-## Contributing
-
-To update portfolio content:
-1. Edit relevant HTML files
-2. Test locally
-3. Commit changes
-4. Push to main branch
-5. GitHub Pages auto-deploys
-
-## License
-
-MIT License - feel free to use this portfolio template for your own projects.
-
-## Support
-
-For questions or issues:
-1. Check the HTML structure
-2. Verify CSS variable names
+For questions or suggestions:
+1. Check existing project details
+2. Review the HTML structure
 3. Test in browser DevTools
-4. Check GitHub Pages settings
+4. Verify GitHub Pages settings
 
-## Credits
+## 📄 License
 
-- Design: Microsoft Fluent Design System
-- Icons: Inline SVG (Feather-inspired)
-- Fonts: System font stack
-- Hosting: GitHub Pages
+MIT License - Feel free to use this portfolio template for your own projects.
 
 ---
 
-**Last Updated**: 2026
-**Version**: 1.0.0
-**Status**: Active
+**Last Updated**: July 3, 2026  
+**Version**: 1.0.0  
+**Status**: Active & Maintained

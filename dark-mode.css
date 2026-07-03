@@ -1,0 +1,64 @@
+body.dark-mode {
+    --primary: #50E6FF;
+    --primary-dark: #0078D4;
+    --primary-light: #0078D4;
+    
+    --background: #1E1E1E;
+    --surface: #2D2D2D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B4B4B4;
+    --text-light: #808080;
+    
+    --border: #3E3E3E;
+    --divider: #4E4E4E;
+}
+
+body.dark-mode .navbar {
+    background-color: var(--background);
+    border-bottom-color: var(--border);
+}
+
+body.dark-mode .nav-link {
+    color: var(--text-primary);
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #1B5E9B 0%, #0B3B7A 100%);
+}
+
+body.dark-mode .about {
+    background-color: var(--surface);
+}
+
+body.dark-mode .project-card {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+body.dark-mode .tech-badge {
+    background-color: rgba(80, 230, 255, 0.1);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+body.dark-mode .skills {
+    background-color: var(--surface);
+}
+
+body.dark-mode .contact-link {
+    background-color: var(--surface);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+body.dark-mode .contact-link:hover {
+    background-color: var(--primary-dark);
+    color: white;
+    border-color: var(--primary-dark);
+}
+
+body.dark-mode .footer {
+    background-color: var(--surface);
+    color: var(--text-primary);
+    border-top: 1px solid var(--border);
+}
