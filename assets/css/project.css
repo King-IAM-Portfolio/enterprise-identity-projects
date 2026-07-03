@@ -736,3 +736,14 @@ body.dark-mode .code-block {
         flex-wrap: wrap;
     }
 }
+.summary-card{
+    max-width:900px;
+    margin:40px auto;
+    padding:30px;
+    background:#ffffff;
+    border-left:6px solid #0078D4;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    line-height:1.8;
+    font-size:18px;
+}
