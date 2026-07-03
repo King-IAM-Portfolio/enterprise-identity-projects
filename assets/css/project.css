@@ -747,3 +747,18 @@ body.dark-mode .code-block {
     line-height:1.8;
     font-size:18px;
 }
+/* ==========================================
+   Project Hero Image
+========================================== */
+
+.image-container{
+    text-align:center;
+    margin:40px 0;
+}
+
+.project-hero-image{
+    width:100%;
+    max-width:1400px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
