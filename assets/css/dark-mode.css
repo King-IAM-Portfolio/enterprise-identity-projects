@@ -1,0 +1,173 @@
+/* ========================================
+   DARK MODE THEME OVERRIDES
+   ======================================== */
+
+body.dark-mode {
+    /* Update color scheme for dark mode */
+    --background: #1f1f1f;
+    --surface: #2d2d2d;
+    --surface-light: #242424;
+    --text-primary: #e1e1e1;
+    --text-secondary: #b4b4b4;
+    --text-tertiary: #808080;
+    --border: #404040;
+    --border-light: #353535;
+}
+
+/* Navigation in dark mode */
+body.dark-mode .navbar {
+    background-color: var(--background);
+    border-bottom-color: var(--border);
+}
+
+/* Hero section in dark mode */
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #2a2a2a 0%, #242424 100%);
+}
+
+/* Skills section in dark mode */
+body.dark-mode .skills {
+    background-color: var(--surface-light);
+}
+
+/* Contact section in dark mode */
+body.dark-mode .contact {
+    background-color: var(--surface-light);
+}
+
+/* Cards in dark mode */
+body.dark-mode .project-card,
+body.dark-mode .skill-card,
+body.dark-mode .stat-card,
+body.dark-mode .contact-card {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+/* Card hover state in dark mode */
+body.dark-mode .project-card:hover,
+body.dark-mode .skill-card:hover,
+body.dark-mode .stat-card:hover,
+body.dark-mode .contact-card:hover {
+    border-color: var(--primary);
+}
+
+/* Icon backgrounds in dark mode */
+body.dark-mode .project-icon,
+body.dark-mode .stat-card {
+    background-color: rgba(0, 120, 212, 0.1);
+}
+
+/* Skill icon in dark mode */
+body.dark-mode .skill-icon {
+    background: linear-gradient(135deg, var(--primary) 0%, #005a9e 100%);
+}
+
+/* Theme toggle hover state */
+body.dark-mode .theme-toggle:hover {
+    background-color: var(--surface);
+}
+
+/* Footer in dark mode */
+body.dark-mode .footer {
+    background-color: #121212;
+    border-top-color: var(--border);
+}
+
+/* Text colors in dark mode */
+body.dark-mode .section-header p {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .project-description,
+body.dark-mode .skill-card p,
+body.dark-mode .about-text p,
+body.dark-mode .hero-description {
+    color: var(--text-secondary);
+}
+
+body.dark-mode p {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .stat-label {
+    color: var(--text-secondary);
+}
+
+body.dark-mode .hero-subtitle {
+    color: var(--text-secondary);
+}
+
+/* Mobile menu in dark mode */
+body.dark-mode .nav-menu.active {
+    background-color: var(--background);
+    border-bottom-color: var(--border);
+}
+
+/* Shadows in dark mode (more pronounced) */
+body.dark-mode {
+    --shadow-sm: 0 0.5px 1px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 3px 6px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation links in dark mode */
+body.dark-mode .nav-link {
+    color: var(--text-primary);
+}
+
+body.dark-mode .nav-link:hover {
+    color: var(--primary);
+}
+
+/* Footer text in dark mode */
+body.dark-mode .footer p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .footer-links a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .footer-links a:hover {
+    color: white;
+}
+
+/* Secondary button in dark mode */
+body.dark-mode .btn-secondary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+body.dark-mode .btn-secondary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Smooth color transitions when toggling theme */
+body,
+body * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ========================================
+   THEME ICON VISIBILITY
+   ======================================== */
+
+/* Show sun icon by default (light mode active) */
+body .sun-icon {
+    display: block;
+}
+
+body .moon-icon {
+    display: none;
+}
+
+/* Show moon icon in dark mode */
+body.dark-mode .sun-icon {
+    display: none;
+}
+
+body.dark-mode .moon-icon {
+    display: block;
+}
