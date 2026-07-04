@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="User Lifecycle Management and Identity Administration project using Microsoft Entra ID." />
 
-    <title>User Lifecycle Management | IAM Portfolio</title>
+    <title>Microsoft Entra ID User Lifecycle Management</title>
 
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../dark-mode.css" />
@@ -82,9 +82,8 @@
 
       <div class="content-box">
         <p>
-          A fictional organization needed to prepare a new Microsoft Entra ID tenant for identity administration.
-          Before additional users could be onboarded, the tenant required an operational administrator account with
-          appropriate permissions to manage users, roles, licenses, and directory settings.
+          <p>
+            A newly provisioned Microsoft Entra ID test tenant required the creation of its first operational administrator before identity services could be delegated. This implementation established the foundational administrative identity used to manage users, directory roles, and future identity lifecycle operations within a non-production enterprise environment.
         </p>
       </div>
     </section>
@@ -97,7 +96,7 @@
           <li>Create the first operational administrator account in Microsoft Entra ID.</li>
           <li>Validate the new administrator account in the tenant user list.</li>
           <li>Assign the Global Administrator role for initial tenant setup activities.</li>
-          <li>Document user lifecycle steps in a clear, recruiter-friendly implementation format.</li>
+          <li>Document user lifecycle steps for clear, concise understanding of the user.</li>
           <li>Demonstrate understanding of identity administration, role assignment, and tenant setup.</li>
         </ul>
       </div>
@@ -116,7 +115,19 @@
         </ul>
       </div>
     </section>
-
+    <section class="project-section">
+      <h2>Technologies Used</h2>
+      <div class="content-box">
+        <ul>
+          <li>Microsoft Entra ID</li>
+          <li>Microsoft Entra Admin Center</li>
+          <li>Microsoft Azure Portal</li>
+          <li>Microsoft 365 Identity Platform</li>
+          <li>Role-Based Access Control (RBAC)</li>
+          <li>Cloud-only user administration</li>
+        </ul>
+      </div>
+    </section>
    <section class="project-section">
           <h2>Implementation Steps</h2>
         
@@ -219,7 +230,7 @@
 
         <div class="skill-item">
           <h4>Technical Documentation</h4>
-          <p>Created a visual workflow and written an implementation summary for portfolio review.</p>
+          <p>Created a visual workflow and wrote an implementation summary for portfolio review.</p>
         </div>
       </div>
     </section>
@@ -229,13 +240,56 @@
 
       <div class="content-box">
         <ul>
-          <li>Initial tenant setup requires a clear administrative identity strategy.</li>
-          <li>Privileged accounts should be documented and monitored because they can control tenant-wide identity settings.</li>
-          <li>Visual documentation makes identity workflows easier to explain during interviews and technical reviews.</li>
-          <li>Portfolio projects are stronger when they show both the technical steps and the security reasoning behind them.</li>
+        <ul>
+            <li>Provisioning foundational administrative identities early establishes a secure baseline for future Microsoft Entra ID administration.</li>
+        
+            <li>Administrative access should always be validated after role assignment to confirm directory permissions before performing privileged tasks.</li>
+        
+            <li>Applying least-privilege principles and maintaining separate privileged identities reduces administrative risk and strengthens the tenant security posture.</li>
+        
+            <li>Maintaining detailed implementation documentation improves operational repeatability, supports audit readiness, and simplifies future identity lifecycle activities.
         </ul>
       </div>
     </section>
+      <section class="project-section">
+          <h2>Business Impact</h2>
+          <div class="content-box">
+            <p>
+                Successfully established the foundational administrative identity for a newly provisioned Microsoft Entra ID tenant. This implementation enabled secure user provisioning, delegated administrative control, directory management, and future identity governance activities while demonstrating enterprise identity administration best practices in a controlled lab environment.
+            </p>
+          </div>
+        </section>
+        
+        <section class="project-section">
+          <h2>Core Compentencies</h2>
+          <div class="skills-grid">
+            <div class="skill-item"><h4>Microsoft Entra ID</h4></div>
+            <div class="skill-item"><h4>Identity Administration</h4></div>
+            <div class="skill-item"><h4>RBAC</h4></div>
+            <div class="skill-item"><h4>User Provisioning</h4></div>
+            <div class="skill-item"><h4>User Lifecycle Management</h4></div>
+            <div class="skill-item"><h4>Cloud Identity</h4></div>
+            <div class="skill-item"><h4>Zero Trust</h4></div>
+            <div class="skill-item"><h4>SC-300</h4></div>
+          </div>
+        </section>
+        
+        <section class="project-section">
+            <div class="content-box">
+        
+                <p><strong>Status:</strong> Completed</p>
+        
+                <p><strong>Date Completed:</strong> July 2026</p>
+        
+                <p><strong>Next Project:</strong></p>
+        
+                <a href="identity-offboarding-access-revocation.html"
+                   class="project-button">
+                    Identity Offboarding & Access Revocation →
+                </a>
+        
+            </div>
+        </section>
   </main>
 
   <footer class="footer">
